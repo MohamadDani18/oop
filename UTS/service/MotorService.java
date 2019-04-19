@@ -21,7 +21,7 @@ public class MotorService {
     }
 
     public void deleteData(String id) {
-        int idx = data.indexOf(new Motor(id, "", ""));
+        int idx = data.indexOf(new Motor(id, "", "","", "",""));
         if(idx >= 0) {
             data.remove(idx);
             System.out.println("data telah terhapus");
@@ -34,8 +34,11 @@ public class MotorService {
         for(Motor mtr : data) {
             System.out.println("data ke-" + i++);
             System.out.println("  ID : " + mtr.getId());
-            System.out.println("  NAMA : " + mtr.getNama());
+            System.out.println("  NAMA COSTUMER : " + mtr.getNama());
             System.out.println("  MERK MOTOR : " + mtr.getMerk());
+            System.out.println("  TAHUN : " + mtr.getTahun());
+            System.out.println("  KERUSAKAN : " + mtr.getKerusakan());
+            System.out.println("  BIAYA : " + mtr.getBiaya());
         }
     }
 

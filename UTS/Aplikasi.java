@@ -57,30 +57,42 @@ public class Aplikasi {
 
     private static void showFormEditData() {
         scanner = new Scanner(System.in);
-        String id, nama, merk;
+        String id, nama, merk, tahun, kerusakan, biaya;
 
         System.out.println("\n=--= Form Ubah Data =--=");
         System.out.print("ID : ");
         id = scanner.nextLine();
-        System.out.print("NAMA : ");
+        System.out.print("NAMA CUSTOMER : ");
         nama = scanner.nextLine();
         System.out.print("MERK MOTOR : ");
         merk = scanner.nextLine();
-        service.updateData(new Motor(id, nama, merk));
+        System.out.print("TAHUN : ");
+        tahun = scanner.nextLine();
+        System.out.print("KERUSAKAN : ");
+        kerusakan = scanner.nextLine();
+        System.out.print("BIAYA : ");
+        biaya = scanner.nextLine();
+        service.updateData(new Motor(id, nama, merk, tahun, kerusakan, biaya));
     }
 
     private static void showFormTambahData() {
         scanner = new Scanner(System.in);
-        String id, nama, merk;
+        String id, nama, merk, tahun, kerusakan, biaya;
 
         System.out.println("\n=--= Form Tambah Data =--=");
         System.out.print("ID : ");
         id = scanner.nextLine();
-        System.out.print("NAMA : ");
+        System.out.print("NAMA CUSTOMER : ");
         nama = scanner.nextLine();
         System.out.print("MERK MOTOR : ");
         merk = scanner.nextLine();
-        service.addData(new Motor(id, nama, merk));
+        System.out.print("TAHUN : ");
+        tahun = scanner.nextLine();
+        System.out.print("KERUSAKAN : ");
+        kerusakan = scanner.nextLine();
+        System.out.print("BIAYA : ");
+        biaya = scanner.nextLine();
+        service.addData(new Motor(id, nama, merk, tahun, kerusakan, biaya));
     }
 
     private static void showMenu() {
